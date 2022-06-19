@@ -6,7 +6,7 @@ TIME=`date +%d-%m-%Y_%H%M`
 
 
 #configure the logging function
-LOG_FILE=/home/chs88/scripts_backup/backuplog.txt
+LOG_FILE=/mnt/shared_hdd/backups/backuplog.txt
 logger () { ## $1 is the message we are going to pass to the function
     echo "$TIME - $1" >> $LOG_FILE
 
@@ -14,8 +14,8 @@ logger () { ## $1 is the message we are going to pass to the function
 
 ##configure directories
 
-SOURCE="/home/chs88/Desktop/Practice_Projects"
-TARGET="/home/chs88/scripts_backup/"
+SOURCE="/home/chs-rpi/"
+TARGET="/mnt/shared_hdd/backups"
 FILENAME="backup-$TIME.tgz"
 
 ##configure the function for archiving
